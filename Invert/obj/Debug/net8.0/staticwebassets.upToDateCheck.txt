@@ -89,9 +89,12 @@ wwwroot\assets\img\cta\cta-4.webp
 wwwroot\assets\img\favicon.png
 wwwroot\assets\img\illustration\illustration-16.webp
 wwwroot\assets\img\logo.webp
+wwwroot\assets\img\person\0c74e945-8eda-4777-90ab-4f5dd4cb5e5665cf665d-ebf9-41b7-abe3-83c505d37d5c.jpg
 wwwroot\assets\img\person\192ad97b-0691-44af-ac04-b3539525d3f8face2.jpg
+wwwroot\assets\img\person\22d8ed6e-87e2-436c-8fef-ce9161330ba3263c3a1b-de6d-4534-b707-ead7014e84f9.jpg
 wwwroot\assets\img\person\4060dad8-2e54-486d-b7a2-5b4ce58ca44aface21.jpg
 wwwroot\assets\img\person\4a93a175-4952-40c7-b94d-35d9bb7ab39fface2.jpg
+wwwroot\assets\img\person\4c4b6686-ea37-4f5e-863e-fbc1b2265569263c3a1b-de6d-4534-b707-ead7014e84f9.jpg
 wwwroot\assets\img\person\c63aefbe-90bf-4e58-bde3-e4c2377b6f20face2.jpg
 wwwroot\assets\img\person\face18.jpg
 wwwroot\assets\img\person\face2.jpg

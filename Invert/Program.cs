@@ -1,8 +1,23 @@
 using Invert.DAL;
+using Invert.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+{
+
+    opt.Password.RequireNonAlphanumeric = false;
+}
+
+).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+
+
+
+
 builder.Services.AddDbContext<AppDbContext>(opt =>
 
 {
@@ -31,7 +46,7 @@ app.MapControllerRoute(
 
 );
 app.MapControllerRoute(
-   
+
     "default",
     "{controller=home}/{action=index}/{id?}"
 
