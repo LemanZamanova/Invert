@@ -1,0 +1,73 @@
+﻿@using Invert.Models
+@using Invert.ViewModels
+@model CreateEmployeeVM
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Employee</h4>
+               
+                <form method="post" enctype="multipart/form-data" class="forms-sample">
+                    <div class="form-group">
+                        <label asp-for="Name" for="exampleInputName1">Name</label>
+                        <input asp-for="Name" type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Surname" for="exampleInputEmail3">Surname</label>
+                        <input asp-for="Surname" type="text" class="form-control" id="exampleInputEmail3" placeholder="Surname">
+                        <span class="text-danger" asp-validation-for="Surname"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Photo" for="exampleInputPassword4">Image</label>
+                        <input asp-for="Photo" type="file" class="form-control" id="exampleInputPassword4" placeholder="Image">
+                        <span class="text-danger" asp-validation-for="Photo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="XUrl" for="exampleInputPassword4">XUrl</label>
+                        <input asp-for="XUrl" type="text" class="form-control" id="exampleInputPassword4" placeholder="XUrl">
+                        <span class="text-danger" asp-validation-for="XUrl"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="InstagramUrl" for="exampleInputPassword4">InstagramUrl</label>
+                        <input asp-for="InstagramUrl" type="text" class="form-control" id="exampleInputPassword4" placeholder="InstagramUrl">
+                        <span class="text-danger" asp-validation-for="InstagramUrl"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FacebookUrl" for="exampleInputPassword4">FacebookUrl</label>
+                        <input asp-for="FacebookUrl" type="text" class="form-control" id="exampleInputPassword4" placeholder="FacebookUrl">
+                        <span class="text-danger" asp-validation-for="FacebookUrl"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LinkedinUrl" for="exampleInputPassword4">LinkedinUrl</label>
+                        <input asp-for="LinkedinUrl" type="text" class="form-control" id="exampleInputPassword4" placeholder="LinkedinUrl">
+                        <span class="text-danger" asp-validation-for="LinkedinUrl"></span>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label asp-for="PositionId">Postion</label>
+                        <br />
+                        <select asp-for="PositionId">
+                            <option selected disabled> Choose Position</option>
+                          
+                            @foreach(Position position in Model.Position)
+                            {
+                                <option value="@position.Id">@position.Name</option>
+                            }
+                        </select>
+                        <span class="text-danger" asp-validation-for="PositionId"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Decription" for="exampleTextarea1">Description</label>
+                        <textarea row="7" asp-for="Decription" class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                        <span class="text-danger" asp-validation-for="Decription"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button  class="btn btn-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
