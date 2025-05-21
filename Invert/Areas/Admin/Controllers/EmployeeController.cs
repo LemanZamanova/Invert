@@ -5,11 +5,11 @@ using Invert.Utilities.Extensions;
 using Invert.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 
 namespace Invert.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    //[Authorize(Roles = "Admin,Moderator")]
     public class EmployeeController : Controller
     {
         private readonly AppDbContext _context;
@@ -119,33 +119,33 @@ namespace Invert.Areas.Admin.Controllers
             };
             return View(updateEmployeeVm);
         }
-            [HttpPost]
-            public async Task<IActionResult> Update(int? id,CreateEmployeeVM employeeVM)
-            {
+        [HttpPost]
+        public async Task<IActionResult> Update(int? id, CreateEmployeeVM employeeVM)
+        {
             employeeVM.Position = await _context.Position.ToListAsync();
-            if(!ModelState.IsValid) return View(employeeVM);
+            if (!ModelState.IsValid) return View(employeeVM);
             Employee? existed = await _context.Employees.FirstOrDefaultAsync(e => e.Id == id);
-            if (employeeVM.Photo is  not null)
+            if (employeeVM.Photo is not null)
             {
 
-                if(!employeeVM.Photo.ValidateType("image/"))
+                if (!employeeVM.Photo.ValidateType("image/"))
                 {
-                    ModelState.AddModelError(nameof(employeeVM.Photo),"File type is incorrect");
+                    ModelState.AddModelError(nameof(employeeVM.Photo), "File type is incorrect");
                     return View(employeeVM);
                 }
-                if(!employeeVM.Photo.ValidateSize(FileSize.MB,1))
+                if (!employeeVM.Photo.ValidateSize(FileSize.MB, 1))
                 {
                     ModelState.AddModelError(nameof(employeeVM.Photo), "File size is incorrect");
                     return View(employeeVM);
                 }
-               
-               
-                if(employeeVM.Photo is null)
+
+
+                if (employeeVM.Photo is null)
                 {
-                    existed.Image.DeleteFile(_env.WebRootPath,"assets","img","person");
+                    existed.Image.DeleteFile(_env.WebRootPath, "assets", "img", "person");
                 }
 
-               
+
                 existed.Image = await employeeVM.Photo.CreateFile(_env.WebRootPath, "assets", "img", "person");
 
             }
@@ -163,5 +163,5 @@ namespace Invert.Areas.Admin.Controllers
 
         }
 
-        }
     }
+}

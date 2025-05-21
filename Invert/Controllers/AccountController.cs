@@ -1,4 +1,5 @@
 ﻿using Invert.Models;
+using Invert.Utilities.Enums;
 using Invert.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,14 @@ namespace Invert.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public RoleManager<IdentityRole> _roleManager { get; }
+
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
+
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
 
@@ -28,29 +33,31 @@ namespace Invert.Controllers
         public async Task<IActionResult> Register(RegisterVM registerVM)
         {
 
+
+            if (!ModelState.IsValid) return View();
+            AppUser user = new AppUser
             {
-                if (!ModelState.IsValid) return View();
-                AppUser user = new AppUser
-                {
-                    Name = registerVM.Name,
-                    Surname = registerVM.Surname,
-                    UserName = registerVM.UserName,
-                    Email = registerVM.Email,
+                Name = registerVM.Name,
+                Surname = registerVM.Surname,
+                UserName = registerVM.UserName,
+                Email = registerVM.Email,
 
-                };
-                var result = await _userManager.CreateAsync(user, registerVM.Password);
-                if (!result.Succeeded)
+            };
+            var result = await _userManager.CreateAsync(user, registerVM.Password);
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
                 {
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError(string.Empty, error.Description);
-                    }
-                    return View();
-
+                    ModelState.AddModelError(string.Empty, error.Description);
                 }
-                await _signInManager.SignInAsync(user, false);
-                return RedirectToAction(nameof(HomeController.Index), "Home");
+                return View();
+
             }
+
+            await _userManager.AddToRoleAsync(user, UserRole.Member.ToString());
+            await _signInManager.SignInAsync(user, false);
+            return RedirectToAction("index", "Home");
+
 
 
 
@@ -65,7 +72,7 @@ namespace Invert.Controllers
         [HttpPost]
 
 
-        public async Task<IActionResult> Login(LoginVM loginVM)
+        public async Task<IActionResult> Login(LoginVM loginVM, string? returnUrl)
         {
             if (!ModelState.IsValid) return View();
             AppUser user = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == loginVM.UsernameOrEmail || u.Email == loginVM.UsernameOrEmail);
@@ -81,8 +88,10 @@ namespace Invert.Controllers
                 ModelState.AddModelError(string.Empty, "username ,email or password is incorrect");
                 return View();
             }
+            if (returnUrl is null) return RedirectToAction("Index", "Home");
 
-            return RedirectToAction("Index", "Home");
+
+            return Redirect(returnUrl);
         }
 
 
@@ -91,6 +100,22 @@ namespace Invert.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
+
+        //public async Task<IActionResult> CreateRoles()
+        //{
+        //    foreach (UserRole role in Enum.GetValues(typeof(UserRole)))
+        //    {
+        //        if (!await _roleManager.RoleExistsAsync(role.ToString()))
+        //        {
+        //            await _roleManager.CreateAsync(new IdentityRole
+        //            {
+        //                Name = role.ToString()
+        //            });
+        //        }
+        //    }
+        //    return RedirectToAction("Index", "Home");
+        //}
+
 
     }
 }

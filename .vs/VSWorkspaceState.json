@@ -4,13 +4,13 @@
     "\\Invert",
     "\\Invert\\Areas",
     "\\Invert\\Areas\\Admin",
-    "\\Invert\\Areas\\Admin\\Views",
-    "\\Invert\\Areas\\Admin\\Views\\Home",
+    "\\Invert\\Areas\\Admin\\Controllers",
+    "\\Invert\\Models",
     "\\Invert\\ViewModels",
     "\\Invert\\ViewModels\\Employee",
     "\\Invert\\Views",
     "\\Invert\\Views\\Account"
   ],
-  "SelectedNode": "\\Invert.sln",
+  "SelectedNode": "\\Invert\\Models\\AppUser.cs",
   "PreviewInSolutionExplorer": false
 }

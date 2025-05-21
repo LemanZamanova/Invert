@@ -1116,6 +1116,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"l3um262ksx"},{"Name":"integrity","Value":"sha256-H4Rxq3jVzp6NJCoUMA\u002Bqocs23sJ\u002B47CRqvjq2CQXI6U="},{"Name":"label","Value":"_content/Invert/assets/img/person/192ad97b-0691-44af-ac04-b3539525d3f8face2.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"13360"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022H4Rxq3jVzp6NJCoUMA\u002Bqocs23sJ\u002B47CRqvjq2CQXI6U=\u0022"},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 18:27:44 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Invert/assets/img/person/204ccbdf-e6d4-43ef-8f8a-88089f2ab33665cf665d-ebf9-41b7-abe3-83c505d37d5c.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\person\204ccbdf-e6d4-43ef-8f8a-88089f2ab33665cf665d-ebf9-41b7-abe3-83c505d37d5c.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xP4NvGoO3NIjm\u002BSazgxglKYUz7aN43K4sKEiAmy8d78="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"34427"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xP4NvGoO3NIjm\u002BSazgxglKYUz7aN43K4sKEiAmy8d78=\u0022"},{"Name":"Last-Modified","Value":"Wed, 21 May 2025 07:28:55 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Invert/assets/img/person/204ccbdf-e6d4-43ef-8f8a-88089f2ab33665cf665d-ebf9-41b7-abe3-83c505d37d5c.ob2wjqhyjd.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\person\204ccbdf-e6d4-43ef-8f8a-88089f2ab33665cf665d-ebf9-41b7-abe3-83c505d37d5c.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ob2wjqhyjd"},{"Name":"integrity","Value":"sha256-xP4NvGoO3NIjm\u002BSazgxglKYUz7aN43K4sKEiAmy8d78="},{"Name":"label","Value":"_content/Invert/assets/img/person/204ccbdf-e6d4-43ef-8f8a-88089f2ab33665cf665d-ebf9-41b7-abe3-83c505d37d5c.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"34427"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xP4NvGoO3NIjm\u002BSazgxglKYUz7aN43K4sKEiAmy8d78=\u0022"},{"Name":"Last-Modified","Value":"Wed, 21 May 2025 07:28:55 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Invert/assets/img/person/22d8ed6e-87e2-436c-8fef-ce9161330ba3263c3a1b-de6d-4534-b707-ead7014e84f9.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\person\22d8ed6e-87e2-436c-8fef-ce9161330ba3263c3a1b-de6d-4534-b707-ead7014e84f9.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -1163,6 +1175,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"js8k116sk9"},{"Name":"integrity","Value":"sha256-gw6EfTaQImpEXG6uSdFFynkbxoB2ReHEq3GXhX7jqP0="},{"Name":"label","Value":"_content/Invert/assets/img/person/4c4b6686-ea37-4f5e-863e-fbc1b2265569263c3a1b-de6d-4534-b707-ead7014e84f9.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"30624"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022gw6EfTaQImpEXG6uSdFFynkbxoB2ReHEq3GXhX7jqP0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 19 May 2025 19:30:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Invert/assets/img/person/5390663e-f28c-475b-bb18-c78925f3a5efe050b381-6f94-4d9e-85e5-7ae1c791173b.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\person\5390663e-f28c-475b-bb18-c78925f3a5efe050b381-6f94-4d9e-85e5-7ae1c791173b.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gw6EfTaQImpEXG6uSdFFynkbxoB2ReHEq3GXhX7jqP0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"30624"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022gw6EfTaQImpEXG6uSdFFynkbxoB2ReHEq3GXhX7jqP0=\u0022"},{"Name":"Last-Modified","Value":"Wed, 21 May 2025 07:30:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Invert/assets/img/person/5390663e-f28c-475b-bb18-c78925f3a5efe050b381-6f94-4d9e-85e5-7ae1c791173b.js8k116sk9.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\person\5390663e-f28c-475b-bb18-c78925f3a5efe050b381-6f94-4d9e-85e5-7ae1c791173b.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"js8k116sk9"},{"Name":"integrity","Value":"sha256-gw6EfTaQImpEXG6uSdFFynkbxoB2ReHEq3GXhX7jqP0="},{"Name":"label","Value":"_content/Invert/assets/img/person/5390663e-f28c-475b-bb18-c78925f3a5efe050b381-6f94-4d9e-85e5-7ae1c791173b.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"30624"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022gw6EfTaQImpEXG6uSdFFynkbxoB2ReHEq3GXhX7jqP0=\u0022"},{"Name":"Last-Modified","Value":"Wed, 21 May 2025 07:30:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Invert/assets/img/person/c63aefbe-90bf-4e58-bde3-e4c2377b6f20face2.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\person\c63aefbe-90bf-4e58-bde3-e4c2377b6f20face2.jpg'))</AssetFile>

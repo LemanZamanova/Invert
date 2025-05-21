@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Invert")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02c040f2f13cc87ea611831b88ef252ca4ea3677")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0ceb131550bb1797c5dfba2bd09a5fe7b673bb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Invert")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Invert")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
